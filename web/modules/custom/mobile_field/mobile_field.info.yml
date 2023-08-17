@@ -1,0 +1,4 @@
+name: Mobile Number
+description: Custom Field Indian Mobile Number
+type: module
+core_version_requirement: ^9 || ^10

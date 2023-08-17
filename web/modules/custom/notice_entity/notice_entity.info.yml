@@ -1,0 +1,5 @@
+name: 'notice_entity'
+type: module
+description: 'Notice entity'
+package: Custom
+core_version_requirement: ^10
