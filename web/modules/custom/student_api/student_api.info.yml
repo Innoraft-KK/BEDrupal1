@@ -1,0 +1,5 @@
+name: 'Student API'
+type: module
+description: 'Student API to display joining date and stream'
+package: Custom
+core_version_requirement: ^10 

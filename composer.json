@@ -22,6 +22,7 @@
         "drupal/devel": "^5.0",
         "drupal/email_registration": "^1.2",
         "drupal/mail_login": "^2.7",
+        "drupal/miniorange_2fa": "^5.1",
         "drupal/pathauto": "^1.11",
         "drush/drush": "^12.1"
     },

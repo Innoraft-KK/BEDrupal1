@@ -1,0 +1,8 @@
+name: 'Custom Cleanup'
+type: module
+description: 'Performs content and user cleanup tasks.'
+core_version_requirement: ^10
+package: Custom
+dependencies:
+  - drupal:node
+  - drupal:user

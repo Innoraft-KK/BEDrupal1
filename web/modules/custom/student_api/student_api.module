@@ -1,0 +1,17 @@
+<?php 
+/**
+ * Implements hook_theme().
+ */
+function student_api_theme($existing, $type, $theme, $path) {
+  return [
+    'student_dashboard' => [
+      'variables' => [
+        'user_data' => [],
+        'passing_year_data' => [],
+        'display_name_data' => [],
+        'user_roles_data' => [],
+      ],
+      'template' => 'student-dashboard',
+    ],
+  ];
+}

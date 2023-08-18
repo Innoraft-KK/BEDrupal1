@@ -1,5 +1,0 @@
-name: 'movie_entity'
-type: module
-description: 'Movie entity'
-package: Custom
-core_version_requirement: ^10

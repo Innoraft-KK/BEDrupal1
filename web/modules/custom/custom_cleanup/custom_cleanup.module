@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * Implements hook_cron().
+ */
+function custom_cleanup_cron() {
+  // Delete nodes of content type "notice" older than the current date.
+  $query = \Drupal::entityQuery('node')
+    ->condition('type', 'notice')
+    ->condition('status', 1)
+    ->condition('field_published_date', time(), '<');
+  
+  $nids = $query->execute();
+  if (!empty($nids)) {
+    node_delete_multiple($nids);
+  }
+  
+  // Delete users of role "student" whose passing out date is older than current date + 6 months.
+  $sixMonthsAgo = strtotime('-6 months');
+  $query = \Drupal::entityQuery('user')
+    ->condition('status', 1)
+    ->condition('roles', 'student')
+    ->condition('field_passing_year', $sixMonthsAgo, '<');
+  
+  $uids = $query->execute();
+  if (!empty($uids)) {
+    user_delete_multiple($uids);
+  }
+}

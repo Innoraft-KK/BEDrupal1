@@ -1,0 +1,6 @@
+custom_event_dashboard.dashboard:
+  path: '/student-dashboard'
+  defaults:
+    _controller: '\Drupal\student_api\Controller\StudentDashboardController::dashboard'
+  requirements:
+    _permission: 'access content'
